@@ -48,3 +48,43 @@ a {
         color-scheme: dark;
     }
 }
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: white !important; /* White background */
+    color: black !important; /* Black arrow color */
+    border-radius: 50%; /* Make it circular */
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #f1f1f1 !important; /* Slightly darker on hover */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px !important; /* Adjust arrow size */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .swiper-button-next {
+        right: 42% !important; /* Move right button closer */
+        transform: translateX(50%) !important;
+        top: auto !important;
+        bottom: 30px !important; /* Move to bottom */
+    }
+
+    .swiper-button-prev {
+        left: 42% !important; /* Move left button closer */
+        transform: translateX(-50%) !important;
+        top: auto !important;
+        bottom: 30px !important; /* Move to bottom */
+    }
+}
