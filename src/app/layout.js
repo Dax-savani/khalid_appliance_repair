@@ -1,6 +1,7 @@
 import { Barlow, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/global/navbar";
+import Footer from "@/components/global/Footer";
 
 const barlow = Barlow({
     subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         <body className={`${barlow.variable} ${raleway.variable}`}>
         <Navbar />
         {children}
+        <Footer />
         </body>
         </html>
     );

@@ -43,7 +43,7 @@ const Advantages = () => {
                         >
                             WELCOME TO OUR COMPANY
                         </Typography>
-                        <Divider sx={{ width: "60px", height: "4px", backgroundColor: "#FFC107", mt: "4px" }} />
+                        <Divider sx={{ width: "100%", height: "4px", backgroundColor: "#FFC107", mt: "4px" }} />
                     </Box>
 
                     <Typography
