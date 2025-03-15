@@ -24,7 +24,7 @@ const slides = [
 
 const HeroSection = () => {
     return (
-        <Box sx={{ position: 'relative', width: '100%', height: {xs: '60vh',sm:'70vh',md:'100vh'}, overflow: 'hidden' }}>
+        <Box sx={{ position: 'relative', width: '100%', height: {xs: '60vh',sm:'70vh',md:'85vh'}, overflow: 'hidden' }}>
             <Swiper
                 modules={[Navigation, Autoplay]}
                 navigation

@@ -12,22 +12,22 @@ const featuredWorks = [
 
 const FeaturedWorks = () => {
     return (
-        <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 }, textAlign: "center" }}>
+        <Container maxWidth="lg" sx={{ py: 6, textAlign: "center" }}>
             {/* Title Section */}
-            <Typography variant="h4" fontWeight="bold" sx={{ color: "#0D1B2A" }}>
+            <Typography variant="h4" fontWeight="bold" sx={{ color: "#0D1B2A", fontSize: "2.5rem", mb: 2 }}>
                 OUR FEATURED WORKS
             </Typography>
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: 'center', mt: 1, mb: 4 }}>
-                <Box sx={{ width: "70px", height: "1px", backgroundColor: "gray" }} />
-                <Box sx={{ width: "60px", height: "5px", backgroundColor: "#FECD1A" }} />
-                <Box sx={{ width: "70px", height: "1px", backgroundColor: "gray" }} />
+            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 4 }}>
+                <Box sx={{ width: 70, height: 1, backgroundColor: "gray" }} />
+                <Box sx={{ width: 60, height: 5, backgroundColor: "#FECD1A", mx: 1 }} />
+                <Box sx={{ width: 70, height: 1, backgroundColor: "gray" }} />
             </Box>
 
             {/* Featured Works Grid */}
-            <Grid container spacing={3} justifyContent="center">
+            <Grid container spacing={5} justifyContent="center">
                 {featuredWorks.map((work, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
-                        <Card sx={{ position: "relative", borderRadius: "0px", overflow: "hidden", boxShadow: 0 }}>
+                        <Card sx={{ position: "relative", borderRadius: 0, boxShadow: 0, overflow: "unset",my:3,textWrap: "nowrap" }}>
                             {/* Image */}
                             <CardMedia component="img" height="250" image={work.image.src} alt={work.title} />
 
@@ -35,20 +35,30 @@ const FeaturedWorks = () => {
                             <CardContent
                                 sx={{
                                     position: "absolute",
-                                    bottom: 0,
-                                    left: 0,
+                                    bottom: '-20%',
+                                    left: 25,
                                     width: "100%",
-                                    backgroundColor: "white",
+                                    backgroundColor: "#F7F7F8",
                                     color: "#001D46",
-                                    padding: "12px 16px",
-                                    display: "flex",
+                                     display: "flex",
                                     flexDirection: "column",
+                                    justifyContent: "center",
                                     alignItems: "flex-start",
-                                    boxShadow: "0px -5px 10px rgba(0, 0, 0, 0.1)"
                                 }}
                             >
-                                <Typography variant="h6" fontWeight="bold">{work.title}</Typography>
-                                <Typography variant="body2" sx={{ color: "#174C97", display: "flex", alignItems: "center", fontWeight: "bold" }}>
+                                <Typography variant="h6" fontWeight="bold" sx={{ fontSize: "1.25rem" }}>
+                                    {work.title}
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        color: "#174C97",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        fontWeight: "bold",
+                                        fontSize: "1rem",
+                                    }}
+                                >
                                     CASE STUDY →
                                 </Typography>
                             </CardContent>
@@ -58,7 +68,7 @@ const FeaturedWorks = () => {
             </Grid>
 
             {/* View All Button */}
-            <Box sx={{ mt: 4 }}>
+            <Box sx={{ mt: 10 }}>
                 <Button
                     variant="contained"
                     sx={{
@@ -67,9 +77,9 @@ const FeaturedWorks = () => {
                         fontWeight: "bold",
                         px: 4,
                         py: 1.2,
-                        fontSize: "1rem",
+                        fontSize: "1.125rem",
                         boxShadow: "none",
-                        '&:hover': { backgroundColor: "black", color: "#FFC107" },
+                        "&:hover": { backgroundColor: "black", color: "#FFC107" },
                     }}
                 >
                     VIEW ALL CASE STUDIES
