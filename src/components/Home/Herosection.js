@@ -16,7 +16,7 @@ const slides = [
     },
     {
         image: img,
-        title: 'Expert Air Conditioning Services',
+        title: 'BEST PROFESSIONAL SERVICES',
         subtitle: 'Reliable & Professional',
         description: 'Trust our experienced team for top-notch HVAC solutions.',
     },
