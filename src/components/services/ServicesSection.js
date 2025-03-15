@@ -16,7 +16,7 @@ const services = [
     { title: "HVAC CLEANING & OPTIMAZATION", icon: <SettingsIcon sx={{ fontSize: 50 }} /> },
 ];
 
-const ServicesSection = () => {
+const   ServicesSection = () => {
     return (
         <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
             <Grid container spacing={3} justifyContent="center">

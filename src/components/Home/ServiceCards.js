@@ -37,6 +37,9 @@ const ServiceCards = () => {
                                 "&:hover .heading": {
                                     color: "#FFC107",
                                 },
+                                "&:hover .learn-more": {
+                                    color: "#FFC107",
+                                },
                             }}
                         >
                             {/* Icon with Rounded Background */}
@@ -64,10 +67,10 @@ const ServiceCards = () => {
                                 variant="h6"
                                 className="heading"
                                 sx={{
-                                    fontWeight: "bold",
+                                    fontWeight: 700,
                                     color: "#002C5F",
                                     textTransform: "uppercase",
-                                    fontSize: "1.4rem", // Same font size as before
+                                    fontSize: "24px",
                                     transition: "color 0.3s ease",
                                 }}
                             >
@@ -75,21 +78,20 @@ const ServiceCards = () => {
                             </Typography>
 
                             {/* Description */}
-                            <Typography variant="body2" sx={{ color: "text.secondary", mt: 1 }}>
+                            <Typography variant="body2" sx={{ color: "text.secondary",fontSize:'16px'}}>
                                 Cras sed augue a dolor scelerisque eleifend non sed elit....
                             </Typography>
 
                             {/* Learn More */}
                             <Typography
                                 variant="body2"
+                                className="learn-more"
                                 sx={{
                                     mt: 2,
                                     fontWeight: "bold",
                                     color: "#002C5F",
                                     cursor: "pointer",
-                                    "&:hover": {
-                                        textDecoration: "underline",
-                                    },
+                                    fontSize:'16px'
                                 }}
                             >
                                 LEARN MORE →

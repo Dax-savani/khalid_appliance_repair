@@ -1,11 +1,18 @@
 "use client";
+
+import dynamic from "next/dynamic";
 import { useForm } from 'react-hook-form';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { TextField, Button, Container, Typography, Box, Grid, Paper } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailIcon from '@mui/icons-material/Mail';
+
+// ✅ Dynamically import react-leaflet components (Client-Side Only)
+const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import("react-leaflet").then((mod) => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), { ssr: false });
 
 function GetInTouch() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -15,7 +22,7 @@ function GetInTouch() {
     };
 
     return (
-        <Box sx={{bgcolor:'#F7F7F8'}}>
+        <Box sx={{backgroundColor:'#F7F7F8'}}>
             <Container maxWidth="xl" sx={{ py: 10, px: 2 }}>
                 <Typography variant="h4" align="center" gutterBottom sx={{ pb: 1, fontWeight: 'bold', color: '#1E2452' }}>GET IN TOUCH</Typography>
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: 'center', mt: 1, mb: 4 }}>
@@ -101,6 +108,7 @@ function GetInTouch() {
                             <MailIcon sx={{ mr: 1 }} /> yournain@gmail.com
                         </Typography>
                         <Box mt={3} sx={{ width: '100%', height: { xs: '250px', sm: '300px' }, borderRadius: 0, border: '1px solid #000', overflow: 'hidden' }}>
+                            {/* ✅ Map loads only on Client Side */}
                             <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '100%', width: '100%' }}>
                                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                                 <Marker position={[51.505, -0.09]}>

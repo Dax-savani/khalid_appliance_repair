@@ -34,7 +34,7 @@ function WhyChooseUs(props) {
                 <Box py={6} >
                     <Grid container>
                         <Grid item xs={12} md={7} my={4}>
-                            <Typography variant="h3" color={"#1E2452"} fontWeight="bold" className={"heading"} gutterBottom>
+                            <Typography variant="h3" color={"#1E2452"} fontSize={'48px'} fontWeight="bold" className={"heading"} gutterBottom>
                                 WHY CHOOSE US ?
                             </Typography>
                             <Box sx={{display: "flex", alignItems: "center"}}>

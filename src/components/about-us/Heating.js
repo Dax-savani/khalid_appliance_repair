@@ -5,9 +5,9 @@ function Heating(props) {
     return (
         <>
             <Container maxWidth="lg" color={"#374C75"}>
-                <Grid container spacing={4} py={5}>
+                <Grid container spacing={4} py={6}>
                     <Grid item xs={12} md={7} my={4}>
-                        <Typography variant="h3" color={"#1E2452"} fontWeight="bold" className={"heading"} gutterBottom>
+                        <Typography variant="h3" color={"#001D46"} fontWeight="bold" className={"heading"} gutterBottom>
                             HEATING AND AIR CONDITIONING REPAIR AND INSTALLATION COMPANY
                         </Typography>
                         <Box sx={{display: "flex", alignItems: "center"}}>

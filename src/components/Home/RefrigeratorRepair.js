@@ -9,48 +9,9 @@ import Electrician6 from '../../assets/images/home/Electrician6.png';
 
 const RefrigeratorRepair = () => {
     return (
-        <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
-            <Grid container spacing={4} alignItems="center">
-                <Grid item xs={12} md={6}>
-                    <Typography variant="h3" fontWeight="bold" sx={{ fontFamily: "Arial, sans-serif" }} gutterBottom>
-                        FAST, RELIABLE, AND AFFORDABLE REFRIGERATOR REPAIR
-                    </Typography>
-                    <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
-                        <Box sx={{ width: "80px", height: "5px", backgroundColor: "#FECD1A", mr: 0 }} />
-                        <Box sx={{ width: "140px", height: "1px", backgroundColor: "gray" }} />
-                    </Box>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <Box>
-                        <Typography variant="body1" color="textSecondary" sx={{ fontSize: "1rem", lineHeight: 1.6 }} >
-                            At [Your Company Name], we take pride in being your trusted partner for reliable and affordable fridge repair services.
-                            With years of experience and a team of skilled technicians, we are committed to restoring your refrigerator to perfect working condition.
-                        </Typography>
-                        <Typography variant="body1" color="textSecondary" sx={{ fontSize: "1rem", lineHeight: 1.6, mt: 2, mr: 12 }}>
-                            We are committed to restoring your refrigerator to perfect working condition.
-                        </Typography>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                backgroundColor: "#FECD1A",
-                                color: "black",
-                                fontWeight: "bold",
-                                px: 4,
-                                py: 1,
-                                fontSize: "1rem",
-                                boxShadow: 'none',
-                                '&:hover': { backgroundColor: "black", color: "#FECD1A" },
-                                mt: 2
-                            }}
-                        >
-                            READ MORE
-                        </Button>
-                    </Box>
-                </Grid>
-            </Grid>
-
+        <Container maxWidth="lg" sx={{ pb: { xs: 4, md: 6 },  }}>
             {/* Manually Defined Cards Without Using .map() */}
-            <Grid container spacing={3} sx={{ marginTop: "40px" }}>
+            <Grid container spacing={3} sx={{ marginTop: 10 }}>
                 {/* Card 1 */}
                 <Grid item xs={12} sm={6} md={4}>
                     <Card sx={{ position: "relative", borderRadius: "0px", overflow: "hidden" }}>
@@ -71,8 +32,8 @@ const RefrigeratorRepair = () => {
                             textAlign: "center",
                             '&:hover': { color: "#FECD1A", backgroundColor: "rgba(0,0,0,0.6)" }
                         }}>
-                            <Typography variant="h6" fontWeight="bold">BEST QUALITY OF FRIGE</Typography>
-                            <Typography variant="body2">Electrician</Typography>
+                            <Typography variant="h6" fontWeight="bold" sx={{fontSize:'24px',fontWeight:800}} >BEST QUALITY OF FRIGE</Typography>
+                            <Typography variant="body2" sx={{fontSize:'20px',fontWeight:500}}>Electrician</Typography>
                         </CardContent>
                     </Card>
 
@@ -94,8 +55,8 @@ const RefrigeratorRepair = () => {
                             textAlign: "center",
                             '&:hover': { color: "#FECD1A", backgroundColor: "rgba(0,0,0,0.6)" }
                         }}>
-                            <Typography variant="h6" fontWeight="bold">REGRIGERATOR REPAIR</Typography>
-                            <Typography variant="body2">Electrician</Typography>
+                            <Typography variant="h6" fontWeight="bold" sx={{fontSize:'24px',fontWeight:800}}>REGRIGERATOR REPAIR</Typography>
+                            <Typography variant="body2" sx={{fontSize:'20px',fontWeight:500}} >Electrician</Typography>
                         </CardContent>
                     </Card>
                 </Grid>
@@ -120,8 +81,8 @@ const RefrigeratorRepair = () => {
                             textAlign: "center",
                             '&:hover': { color: "#FECD1A", backgroundColor: "rgba(0,0,0,0.6)" }
                         }}>
-                            <Typography variant="h6" fontWeight="bold">INSTALL FRIGE IN OFFICE</Typography>
-                            <Typography variant="body2">Electrician</Typography>
+                            <Typography variant="h6" fontWeight="bold" sx={{fontSize:'24px',fontWeight:800}} >INSTALL FRIGE IN OFFICE</Typography>
+                            <Typography variant="body2" sx={{fontSize:'20px',fontWeight:500}}>Electrician</Typography>
                         </CardContent>
                     </Card>
 
@@ -143,8 +104,8 @@ const RefrigeratorRepair = () => {
                             textAlign: "center",
                             '&:hover': { color: "#FECD1A", backgroundColor: "rgba(0,0,0,0.6)" }
                         }}>
-                            <Typography variant="h6" fontWeight="bold">REPAIR & INSTALL</Typography>
-                            <Typography variant="body2">Electrician</Typography>
+                            <Typography variant="h6" fontWeight="bold" sx={{fontSize:'24px',fontWeight:800}} >REPAIR & INSTALL</Typography>
+                            <Typography variant="body2" sx={{fontSize:'20px',fontWeight:500}}>Electrician</Typography>
                         </CardContent>
                     </Card>
                 </Grid>
@@ -171,8 +132,8 @@ const RefrigeratorRepair = () => {
                                     textAlign: "center",
                                     '&:hover': { color: "#FECD1A", backgroundColor: "rgba(0,0,0,0.6)" }
                                 }}>
-                                    <Typography variant="h6" fontWeight="bold">INDORE REPAIR</Typography>
-                                    <Typography variant="body2">Electrician</Typography>
+                                    <Typography variant="h6" fontWeight="bold" sx={{fontSize:'24px',fontWeight:800}} >INDORE REPAIR</Typography>
+                                    <Typography variant="body2" sx={{fontSize:'20px',fontWeight:500}}>Electrician</Typography>
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -195,8 +156,8 @@ const RefrigeratorRepair = () => {
                                     textAlign: "center",
                                     '&:hover': { color: "#FECD1A", backgroundColor: "rgba(0,0,0,0.6)" }
                                 }}>
-                                    <Typography variant="h6" fontWeight="bold">REFRIGERATOR</Typography>
-                                    <Typography variant="body2">Electrician</Typography>
+                                    <Typography variant="h6" fontWeight="bold" sx={{fontSize:'24px',fontWeight:800}} >REFRIGERATOR</Typography>
+                                    <Typography variant="body2" sx={{fontSize:'20px',fontWeight:500}}>Electrician</Typography>
                                 </CardContent>
                             </Card>
                         </Grid>

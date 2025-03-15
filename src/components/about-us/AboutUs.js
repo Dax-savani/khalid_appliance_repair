@@ -58,7 +58,7 @@ const AboutUs = () => {
                     <Grid item xs={12} md={7} my={4}>
                         <Typography
                             variant="h3"
-                            color={'#1E2452'}
+                            color={'#1E2452'} fontSize={'48px'}
                             fontWeight="bold"
                             gutterBottom
                         >

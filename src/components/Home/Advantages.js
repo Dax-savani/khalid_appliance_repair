@@ -12,20 +12,42 @@ const advantages = [
 
 const Advantages = () => {
     return (
-        <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
+        <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 }, mt:6 }}>
             <Grid container spacing={4} alignItems="center">
                 {/* Image Section */}
                 <Grid item xs={12} md={6}>
                     <Box
-                        component="img"
-                        src={img.src}
-                        alt="Refrigerator Repair"
                         sx={{
-                            width: "100%",
+                            position: "relative",
                             borderRadius: 2,
-                            boxShadow: 3,
+                            overflow: "hidden",
                         }}
-                    />
+                    >
+                        {/* Image */}
+                        <Box
+                            component="img"
+                            src={img.src}
+                            alt="Refrigerator Repair"
+                            sx={{
+                                width: "100%",
+                                display: "block",
+                                borderRadius: 2,
+                            }}
+                        />
+
+                        {/* Color Overlay */}
+                        <Box
+                            sx={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                                backgroundColor: "#2D72BB",
+                                opacity: 0.4,
+                            }}
+                        />
+                    </Box>
                 </Grid>
 
                 {/* Text Section */}
@@ -38,7 +60,7 @@ const Advantages = () => {
                                 fontWeight: "bold",
                                 fontSize: { xs: "16px", md: "18px" },
                                 textTransform: "uppercase",
-                                color: "primary.main",
+                                color: "#2D72BB",
                             }}
                         >
                             WELCOME TO OUR COMPANY
