@@ -23,10 +23,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-        <body className={`${barlow.variable} ${raleway.variable}`}>
-        <Navbar />
+        <body className={`${barlow.variable} ${raleway.variable}`} cz-shortcut-listen="true">
+        <Navbar/>
         {children}
-        <Footer />
+        <Footer/>
         </body>
         </html>
     );
