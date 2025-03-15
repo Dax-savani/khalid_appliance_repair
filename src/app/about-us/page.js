@@ -5,6 +5,7 @@ import Heating from "@/components/about-us/Heating";
 import WhyChooseUs from "@/components/about-us/WhyChooseUs";
 import AboutUs from "@/components/about-us/AboutUs";
 function Page(props) {
+    
     return (
         <>
             <HeroSection image={heroimage.src} title={"ABOUT US"}/>
