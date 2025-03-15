@@ -11,7 +11,7 @@ export default function Home() {
             <Advantages />
             <ServiceCards />
             <RefrigeratorRepair />
-            <FeaturedWorks />
+            <FeaturedWorks />            
         </>
     );
 }

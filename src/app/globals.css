@@ -88,3 +88,31 @@ a {
         bottom: 30px !important; /* Move to bottom */
     }
 }
+
+.category2 .swiper-button-next:after,
+.category2 .swiper-button-prev:after {
+    display: none;
+}
+.category2 .category2-next {
+    position: absolute;
+    cursor: pointer;
+    bottom: -20px;
+    left: 60px;
+}
+.category2 .category2-prev {
+    cursor: pointer;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+/*@media only screen and (max-width: 550px) {*/
+/*    .category2 .category2-next {*/
+/*        bottom: 100px;*/
+/*        right: 0;*/
+/*    }*/
+/*    .category2 .category2-prev {*/
+/*        bottom: 100px;*/
+/*        left: unset;*/
+/*        right: 70px;*/
+/*    }*/
+/*}*/
