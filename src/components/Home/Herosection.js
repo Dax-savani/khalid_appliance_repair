@@ -1,11 +1,12 @@
 'use client';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Box, Button, Typography } from '@mui/material';
 import img from '../../assets/images/home/fridge-repair1 1.png';
+import axios from "axios";
 
 const slides = [
     {
@@ -23,6 +24,16 @@ const slides = [
 ];
 
 const HeroSection = () => {
+    const [slider,setSlider] = useState([])
+    const fetchSliderData = async () => {
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/slider`)
+        setSlider(res.data.data)
+    }
+
+    useEffect(() => {
+        fetchSliderData()
+    },[])
+
     return (
         <Box sx={{ position: 'relative', width: '100%', height: {xs: '60vh',sm:'70vh',md:'85vh'}, overflow: 'hidden' }}>
             <Swiper
@@ -33,7 +44,7 @@ const HeroSection = () => {
                 loop
                 className='hero-swiper'
             >
-                {slides.map((slide, index) => (
+                {slider.map((slide, index) => (
                     <SwiperSlide key={index}>
                         <Box
                             sx={{
@@ -50,10 +61,10 @@ const HeroSection = () => {
                         >
                             <Box sx={{ padding: 3, borderRadius: 2, width: { xs: '90%', md: '70%' } }}>
                                 <Typography variant='h3' fontWeight='bold' gutterBottom sx={{ fontSize: { xs: '30px', sm: '50px', md: '70px' } }}>
-                                    {slide.title}
+                                    {slide?.title}
                                 </Typography>
                                 <Typography variant='body1' mb={3} sx={{ fontSize: { xs: '14px', sm: '16px', md: '18px' } }}>
-                                    {slide.description}
+                                    {slide?.description}
                                 </Typography>
                                 <Button
                                     variant='contained'

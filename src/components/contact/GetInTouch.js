@@ -7,6 +7,7 @@ import { TextField, Button, Container, Typography, Box, Grid, Paper } from '@mui
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailIcon from '@mui/icons-material/Mail';
+import axios from "axios";
 
 const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
 const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
@@ -18,6 +19,12 @@ function GetInTouch() {
 
     const onSubmit = (data) => {
         console.log("Form Data Submitted:", data);
+        try{
+          const res = axios.post(`${process.env.NEXT_PUBLIC_API_URL}/contact`,data)
+            console.log(res,"llllllll")
+        }catch (e){
+            console.log(e)
+        }
     };
 
     return (
@@ -42,9 +49,9 @@ function GetInTouch() {
                                     <Grid item xs={12} sm={6}>
                                         <TextField
                                             label="Your Full Name"
-                                            {...register("fullName", { required: "Full Name is required" })}
-                                            error={!!errors.fullName}
-                                            helperText={errors.fullName?.message}
+                                            {...register("fullname", { required: "Fullname is required" })}
+                                            error={!!errors.fullname}
+                                            helperText={errors.fullname?.message}
                                             fullWidth
                                         />
                                     </Grid>
@@ -52,9 +59,9 @@ function GetInTouch() {
                                         <TextField
                                             label="Your Mobile Number"
                                             type="tel"
-                                            {...register("mobileNumber", { required: "Mobile Number is required" })}
-                                            error={!!errors.mobileNumber}
-                                            helperText={errors.mobileNumber?.message}
+                                            {...register("contact", { required: "Contact Number is required" })}
+                                            error={!!errors.contact}
+                                            helperText={errors.contact?.message}
                                             fullWidth
                                         />
                                     </Grid>
@@ -62,9 +69,9 @@ function GetInTouch() {
                                         <TextField
                                             label="Your Email Address"
                                             type="email"
-                                            {...register("emailAddress", { required: "Email Address is required" })}
-                                            error={!!errors.emailAddress}
-                                            helperText={errors.emailAddress?.message}
+                                            {...register("email", { required: "Email Address is required" })}
+                                            error={!!errors.email}
+                                            helperText={errors.email?.message}
                                             fullWidth
                                         />
                                     </Grid>
