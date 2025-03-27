@@ -29,6 +29,10 @@ const Navbar = () => {
     const router = useRouter()
     const pathname = usePathname();
 
+    const now = new Date();
+    const options = { weekday: "long", hour: "numeric", minute: "numeric", hour12: true };
+    const formattedTime = now.toLocaleString("en-US", options);
+
     const navItems = [
         { name: "HOME", path: "/" },
         { name: "ABOUT US", path: "/about-us" },
@@ -55,7 +59,7 @@ const Navbar = () => {
                             }}
                         >
                             <AccessTimeIcon fontSize="small" />
-                            It's Friday, 3:00pm & We are Open Till 6:00pm
+                            {`It's ${formattedTime} & We are Open Till 10:00pm`}
                         </Typography>
 
                         {/* Right Side (Buttons & Social Icons) */}
@@ -64,16 +68,8 @@ const Navbar = () => {
                                 color: "#fff",
                                 textTransform: "none",
                                 fontSize: { xs: "10px", sm: "12px", md: "13px" }
-                            }}>
+                            }} onClick={() => router.push(`/contact`)}>
                                 Schedule a Service
-                            </Button>
-                            <Typography sx={{ color: "#fff", fontWeight: "bold" }}>|</Typography>
-                            <Button startIcon={<QuoteIcon />} sx={{
-                                color: "#fff",
-                                textTransform: "none",
-                                fontSize: { xs: "10px", sm: "12px", md: "13px" }
-                            }}>
-                                Request a Quote
                             </Button>
                             <Typography sx={{ color: "#fff", fontWeight: "bold", display: { xs: 'none', sm: 'block' } }}>|</Typography>
                             <IconButton sx={{ paddingInline: '3px', display: { xs: 'none', sm: 'block' }, color: "#fff" }}>
@@ -94,7 +90,7 @@ const Navbar = () => {
             </AppBar>
 
             {/* Main Navbar */}
-            <AppBar position="static" elevation={0} sx={{ backgroundColor: "#fff", color: "#000", padding: "10px 0" }}>
+            <AppBar position="sticky" elevation={0} sx={{ position: 'sticky',top: 0 ,backgroundColor: "#fff", color: "#000", padding: "10px 0" }}>
                 <Container>
                     <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
                         {/* Logo */}

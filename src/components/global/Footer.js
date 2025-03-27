@@ -4,6 +4,13 @@ import { LinkedIn, Facebook, Twitter } from "@mui/icons-material";
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
+    const menuItems = [
+        { label: "Home", link: "/" },
+        { label: "About Us", link: "/about-us" },
+        { label: "Services", link: "/services" },
+        { label: "Projects", link: "/projects" },
+        { label: "Contact Us", link: "/contact" },
+    ];
     return (
         <Box sx={{ backgroundColor: "#101c44", color: "white", py: 5 }}>
             <Container maxWidth="lg">
@@ -12,7 +19,7 @@ const Footer = () => {
                     <Grid item xs={12} sm={6} md={3}>
                         <Typography variant="h6" fontWeight="bold">ABOUT COMPANY</Typography>
                         <Typography variant="body2" sx={{ mt: 2 }}>
-                            Pellentesque accumsan bibendum bibendum diam et, this is the consectetur adipiscing.
+                            Khalid Appliance Repair ensures reliable and efficient home appliance services, keeping your household running smoothly with expert care.
                         </Typography>
                         <Box sx={{ mt: 2, display: "flex", gap: 1 }}>
                             {[Facebook, LinkedIn, InstagramIcon, Twitter].map((Icon, index) => (
@@ -33,24 +40,25 @@ const Footer = () => {
                         </Box>
                     </Grid>
 
-                    {/* Office Section */}
+                    {/* Contact Section */}
                     <Grid item xs={12} sm={6} md={3}>
-                        <Typography variant="h6" fontWeight="bold">OFFICE -</Typography>
+                        <Typography variant="h6" fontWeight="bold">CONTACT US -</Typography>
                         <Typography variant="body2" sx={{ mt: 2 }}>
-                            Billing address: 20 Pembina Rd #240, Sherwood Park, AB T8H 0M2
+                            We serve your area with our mobile appliance repair service, providing expert solutions right at your doorstep.
                         </Typography>
                         <Typography variant="h6" fontWeight="bold" sx={{ mt: 2, mb: 1 }}>CALL US -</Typography>
                         <Typography variant="body2" sx={{ mb: 1 }}>Cell: 000-000-0000</Typography>
-                        <Typography variant="body2" sx={{ mb: 1 }}>Office: 000-000-0000</Typography>
+                        <Typography variant="body2" sx={{ mb: 1 }}>Helpline: 000-000-0000</Typography>
                     </Grid>
+
 
                     {/* Quick Links */}
                     <Grid item xs={12} sm={6} md={3}>
                         <Typography variant="h6" fontWeight="bold">QUICK LINKS</Typography>
                         <Box sx={{ mt: 2 }}>
-                            {["About Us", "Blog Classic", "Projects", "Services", "Contact Us", "Project Details"].map((text, i) => (
-                                <Link key={i} href="#" color="inherit" underline="none" display="block" sx={{ mb: 1 }}>
-                                    {text}
+                            {menuItems.map((item, i) => (
+                                <Link key={i} href={item.link} color="inherit" underline="none" display="block" sx={{ mb: 1 }}>
+                                    {item.label}
                                 </Link>
                             ))}
                         </Box>

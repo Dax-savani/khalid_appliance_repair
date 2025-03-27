@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
 
-function Heating(props) {
+function Heating() {
     return (
         <>
             <Container maxWidth="lg" color={"#374C75"}>
@@ -33,13 +33,10 @@ function Heating(props) {
                             OUR MISSION
                         </Typography>
                         <Typography variant="body1" color="#374C75">
-                            Bibendum bibendum diam sit amet, consectetur adipiscing elit. Pellentesque
-                            accumsan bibendum bibendum diam et. Ac vulputate morbi egestas porta posuere
-                            curabitur.
+                            At Khalid Appliance Repair, our mission is to provide reliable, efficient, and affordable appliance repair services that keep homes running smoothly. We are committed to delivering high-quality solutions with professionalism and care, ensuring customer satisfaction at every step.
                         </Typography>
                         <Typography variant="body1" color="#374C75" sx={{mt: 1}}>
-                            Pellentesque accumsan bibendum bibendum diam et. Ac vulputate morbi egestas
-                            porta posuere curabitur.
+                            With a focus on precision and excellence, we strive to restore functionality to your appliances quickly and effectively. Our expert technicians use advanced tools and techniques to diagnose and fix issues, offering lasting results you can trust.
                         </Typography>
                     </Grid>
 
@@ -49,13 +46,10 @@ function Heating(props) {
                             OUR VISION
                         </Typography>
                         <Typography variant="body1" color="#374C75">
-                            Ac vulputate morbi egestas amet, consectetur adipiscing elit.
-                            Pellentesque accumsan bibendum bibendum diam et. Ac vulputate morbi
-                            egestas porta posuere curabitur.
+                            Our vision is to be the most trusted and preferred home appliance repair service provider, known for our expertise, integrity, and commitment to excellence. We aim to set industry standards through innovation, reliability, and customer-first service.
                         </Typography>
                         <Typography variant="body1" color="#374C75" sx={{mt: 1}}>
-                            Pellentesque accumsan bibendum bibendum diam et. Ac vulputate morbi egestas
-                            porta posuere curabitur.
+                            By continuously improving our skills and expanding our services, we aspire to enhance the lives of our customers by ensuring their appliances operate at peak performance. Our goal is to make every home a place of convenience and comfort.
                         </Typography>
                     </Grid>
                 </Grid>

@@ -11,7 +11,7 @@ const RefrigeratorRepair = () => {
     return (
         <Container maxWidth="lg" sx={{ pb: { xs: 4, md: 6 },  }}>
             {/* Manually Defined Cards Without Using .map() */}
-            <Grid container spacing={3} sx={{ marginTop: 10 }}>
+            <Grid container spacing={3} sx={{ marginTop: { xs: 4, md: 6 } }}>
                 {/* Card 1 */}
                 <Grid item xs={12} sm={6} md={4}>
                     <Card sx={{ position: "relative", borderRadius: "0px", overflow: "hidden" }}>

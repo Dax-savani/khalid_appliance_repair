@@ -1,9 +1,6 @@
 "use client";
 import {Container, Typography, Box, List, ListItem, ListItemIcon, ListItemText, Divider, Grid} from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import img1 from '../../assets/images/projects/washer-repair-3 1.png';
-import img2 from '../../assets/images/projects/washing-machine-repair-near-me 1.png';
-import img3 from '../../assets/images/projects/Washing-machine-Repair-2 1.png';
 import axios from "axios";
 import {useEffect, useState} from "react";
 
