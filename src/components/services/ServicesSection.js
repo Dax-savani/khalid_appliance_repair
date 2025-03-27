@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+import React, {useEffect, useState} from "react";
 import { Container, Grid, Box, Typography } from "@mui/material";
 import KeyOffIcon from '@mui/icons-material/KeyOff';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
@@ -6,17 +7,28 @@ import HomeIcon from '@mui/icons-material/Home';
 import DescriptionIcon from '@mui/icons-material/Description';
 import SettingsInputSvideoIcon from '@mui/icons-material/SettingsInputSvideo';
 import SettingsIcon from '@mui/icons-material/Settings';
+import axios from "axios";
+import {useRouter} from "next/navigation";
 
-const services = [
-    { title: "HVAC MAITENANCE AND REPAIRS", icon: <KeyOffIcon sx={{ fontSize: 50 }} /> },
-    { title: "INSTALLATION & PROJECT MANAGEMENT", icon: <MiscellaneousServicesIcon sx={{ fontSize: 50 }} /> },
-    { title: "INDOOR AIRS QUALITY TESTING", icon: <HomeIcon sx={{ fontSize: 50 }} /> },
-    { title: "HVAC ELIGANT DESIGNS & FACILITIES", icon: <DescriptionIcon sx={{ fontSize: 50 }} /> },
-    { title: "POWERFULL ENERGY & EFFICIUIENCY", icon: <SettingsInputSvideoIcon sx={{ fontSize: 50 }} /> },
-    { title: "HVAC CLEANING & OPTIMAZATION", icon: <SettingsIcon sx={{ fontSize: 50 }} /> },
-];
+// const services = [
+//     { title: "HVAC MAITENANCE AND REPAIRS", icon: <KeyOffIcon sx={{ fontSize: 50 }} /> },
+//     { title: "INSTALLATION & PROJECT MANAGEMENT", icon: <MiscellaneousServicesIcon sx={{ fontSize: 50 }} /> },
+//     { title: "INDOOR AIRS QUALITY TESTING", icon: <HomeIcon sx={{ fontSize: 50 }} /> },
+//     { title: "HVAC ELIGANT DESIGNS & FACILITIES", icon: <DescriptionIcon sx={{ fontSize: 50 }} /> },
+//     { title: "POWERFULL ENERGY & EFFICIUIENCY", icon: <SettingsInputSvideoIcon sx={{ fontSize: 50 }} /> },
+//     { title: "HVAC CLEANING & OPTIMAZATION", icon: <SettingsIcon sx={{ fontSize: 50 }} /> },
+// ];
 
-const   ServicesSection = () => {
+const ServicesSection = () => {
+    const router = useRouter()
+    const [services,setServices] = useState([])
+const fetchAllServiceData = async () => {
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/service`)
+    setServices(res.data.data)
+}
+useEffect(() => {
+    fetchAllServiceData()
+},[])
     return (
         <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
             <Grid container spacing={3} justifyContent="center">
@@ -31,7 +43,7 @@ const   ServicesSection = () => {
                                 textAlign: "left",
                                 display: "flex",
                                 flexDirection: "column",
-                                height: "350px",
+                                height: "390px",
                                 justifyContent: "space-between",
                                 "&:hover": {
                                     borderColor: "#FFC107",
@@ -63,7 +75,8 @@ const   ServicesSection = () => {
                                 }}
                             >
                                 <Box className="icon" sx={{ color: "#002C5F", transition: "color 0.3s ease" }}>
-                                    {service.icon}
+                                    <img src={service?.iconImage} style={{width:"94px"}} alt="image" />
+
                                 </Box>
                             </Box>
 
@@ -79,18 +92,19 @@ const   ServicesSection = () => {
                                     transition: "color 0.3s ease",
                                 }}
                             >
-                                {service.title}
+                                {service?.title}
                             </Typography>
 
                             {/* Description */}
                             <Typography variant="body2" sx={{ color: "text.secondary", mt: 1 }}>
-                                Sed do eiusmod tempor incididunt ut labore aliqua. Pellentesque accumsan bibendum bibendum diam et elit.
+                                {service?.subDescription}
                             </Typography>
 
                             {/* Learn More */}
                             <Typography
                                 variant="body2"
                                 className="heading"
+                                onClick={() => router.push(`/services/${service?._id}`)}
                                 sx={{
                                     mt: 2,
                                     fontWeight: "bold",
