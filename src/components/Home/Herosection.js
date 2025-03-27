@@ -25,7 +25,7 @@ const HeroSection = () => {
                     <CircularProgress color='primary' />
                 </Box>
             ) : (
-                slider.length > 0 && (
+                slides.length > 0 && (
                     <Swiper
                         modules={[Navigation, Autoplay]}
                         navigation
@@ -34,7 +34,7 @@ const HeroSection = () => {
                         loop
                         className='hero-swiper'
                     >
-                        {slider.map((slide, index) => (
+                        {slides.map((slide, index) => (
                             <SwiperSlide key={index}>
                                 <Box
                                     sx={{
