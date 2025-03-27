@@ -33,7 +33,7 @@ const HeroSection = () => {
     useEffect(() => {
         fetchSliderData()
     },[])
-
+console.log(slider)
     return (
         <Box sx={{ position: 'relative', width: '100%', height: {xs: '60vh',sm:'70vh',md:'85vh'}, overflow: 'hidden' }}>
             <Swiper
@@ -53,7 +53,7 @@ const HeroSection = () => {
                                 alignItems: 'center',
                                 height: '100%',
                                 px: { xs: 2, sm: 4, md: 10, lg: 30 },
-                                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('${slide.image.src}')`,
+                                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('${slide.image}')`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                                 color: 'white',
