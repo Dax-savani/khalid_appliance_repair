@@ -152,6 +152,7 @@ const Navbar = () => {
                                     backgroundColor: "#e6b800",
                                 },
                             }}
+                            onClick={() => router.push('/contact')}
                         >
                             CONTACT NOW
                         </Button>
@@ -187,6 +188,7 @@ const Navbar = () => {
                                     backgroundColor: "#e6b800",
                                 },
                             }}
+                            onClick={() => router.push('/contact')}
                         >
                             CONTACT NOW
                         </Button>
