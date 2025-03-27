@@ -4,13 +4,11 @@ import heroimage from "@/assets/images/contact/hero.png";
 import FAQSection from "@/components/Projects/ProjectFAQ";
 import SingleServiceFile from "@/components/services/SingleServiceFile";
 
-function Page(props) {
-
+function Page({params}) {
     return (
         <>
             <HeroSection image={heroimage.src} title={"PROJECTS"} />
-            <SingleServiceFile />
-           <FAQSection/>
+            <SingleServiceFile params={params} />
 
         </>
     );
