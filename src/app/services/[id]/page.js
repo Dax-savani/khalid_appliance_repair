@@ -7,7 +7,7 @@ import SingleServiceFile from "@/components/services/SingleServiceFile";
 function Page({params}) {
     return (
         <>
-            <HeroSection image={heroimage.src} title={"PROJECTS"} />
+            <HeroSection image={heroimage.src} title={"SERVICE"} />
             <SingleServiceFile params={params} />
 
         </>

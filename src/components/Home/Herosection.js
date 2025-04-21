@@ -11,7 +11,7 @@ const HeroSection = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://f8mrd06dn9.execute-api.ap-south-1.amazonaws.com/api/slider')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/slider`)
             .then((response) => response.json())
             .then((data) => setSlides(data.data))
             .catch((error) => console.error('Error fetching slider data:', error))
