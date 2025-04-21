@@ -47,8 +47,8 @@ const Footer = () => {
                             We serve your area with our mobile appliance repair service, providing expert solutions right at your doorstep.
                         </Typography>
                         <Typography variant="h6" fontWeight="bold" sx={{ mt: 2, mb: 1 }}>CALL US -</Typography>
-                        <Typography variant="body2" sx={{ mb: 1 }}>Cell: 000-000-0000</Typography>
-                        <Typography variant="body2" sx={{ mb: 1 }}>Helpline: 000-000-0000</Typography>
+                        <Typography variant="body2" sx={{ mb: 1 }}>Cell: +971 50 961 5922</Typography>
+                        {/*<Typography variant="body2" sx={{ mb: 1 }}>Helpline: 000-000-0000</Typography>*/}
                     </Grid>
 
 

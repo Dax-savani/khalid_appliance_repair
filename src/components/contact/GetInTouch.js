@@ -8,6 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailIcon from '@mui/icons-material/Mail';
 import axios from "axios";
+import '../../utils/leafletConfig';
 
 const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
 const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
@@ -103,22 +104,22 @@ function GetInTouch() {
 
                     {/* Right Section - Address & Map */}
                     <Grid item xs={12} md={6} lg={5}>
-                        <Typography variant="h5" gutterBottom fontWeight="bold" color='#001D46' my={3}>OUR OFFICE ADDRESS</Typography>
+                        <Typography variant="h5" gutterBottom fontWeight="bold" color='#001D46' my={3}>SERVICE AREA</Typography>
                         <Typography sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#374C75', mb: 2 }}>
-                            <LocationOnIcon sx={{ mr: 1 }} /> 0000, This Society, landmark, city, state - pincode.
+                            <LocationOnIcon sx={{ mr: 1 }} /> Al Majaz, Sharjah, UAE
                         </Typography>
                         <Typography sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#374C75', mb: 2 }}>
-                            <LocalPhoneIcon sx={{ mr: 1 }} /> 789-918-5736
+                            <LocalPhoneIcon sx={{ mr: 1 }} />  +971-789-918-5736
                         </Typography>
                         <Typography sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#374C75', mb: 2 }}>
                             <MailIcon sx={{ mr: 1 }} /> yournain@gmail.com
                         </Typography>
                         <Box mt={3} sx={{ width: '100%', height: { xs: '250px', sm: '300px' }, borderRadius: 0, border: '1px solid #000', overflow: 'hidden' }}>
                             {/* ✅ Map loads only on Client Side */}
-                            <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '100%', width: '100%' }}>
+                            <MapContainer center={[25.335, 55.392]} zoom={13} style={{ height: '100%', width: '100%' }}>
                                 <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                                <Marker position={[51.505, -0.09]}>
-                                    <Popup>Our Office Location</Popup>
+                                <Marker position={[25.335, 55.392]}>
+                                    <Popup>Service area</Popup>
                                 </Marker>
                             </MapContainer>
                         </Box>
